@@ -13,7 +13,7 @@ border-radius: 50%;
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 1px solid #e1dedc;
-  padding: 15px 30px 0px 30px;
+  padding: 15px 50px 0px 50px;
 }
 
 .profile {
@@ -26,6 +26,7 @@ border-radius: 50%;
   font-weight: 600;
   color: #0f193d;
   padding-right: 10px;
+  font-size: 14px;
 }
 
 .menu-btn {

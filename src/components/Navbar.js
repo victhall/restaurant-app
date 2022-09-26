@@ -14,7 +14,7 @@ export default function Navbar() {
       </div>
       <div className={classes.profile}>
         <div className={classes['profile-img']}><img className={classes.pfp} src='../../pfp.png' /></div>
-        <div className={classes.username}>v___oria</div>
+        <div className={classes.username}>fishsoup69</div>
         <FiChevronDown />
       </div>
     </nav>
