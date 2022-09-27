@@ -1,13 +1,9 @@
 import './App.css';
-import Navbar from './components/Navbar';
-import RestaurantList from './components/RestaurantList'
+import Home from './pages/Home'
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <RestaurantList />
-    </>
+    <Home />
   );
 }
 

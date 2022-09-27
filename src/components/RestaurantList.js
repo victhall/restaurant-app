@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import Restaurant from './Restaurant'
+import RestaurantDetail from './RestaurantDetails'
 import classes from './RestaurantList.module.css'
 
 const dummy_data = [
@@ -71,23 +73,25 @@ const dummy_data = [
 ]
 
 export default function RestaurantList() {
+
+
+  let restaurants = dummy_data.map(restaurant => {
+    return <Restaurant
+      key={restaurant.name}
+      name={restaurant.name}
+      rating={restaurant.rating}
+      price={restaurant.price}
+      address={restaurant.address}
+      image={restaurant.image}
+      cuisines={restaurant.cuisines}
+      onClick=''
+    />
+  })
+
   return (
     <div className={classes['restaurant-list']}>
-      {dummy_data.map(restaurant =>
-        <Restaurant
-          key={restaurant.name}
-          name={restaurant.name}
-          rating={restaurant.rating}
-          price={restaurant.price}
-          address={restaurant.address}
-          image={restaurant.image}
-          dining_styles={restaurant.dining_style}
-          phone={restaurant.phone_number}
-          website={restaurant.website}
-          cuisines={restaurant.cuisines}
-        />
-      )}
+      {restaurants}
+      <RestaurantDetail />
     </div>
   )
-
 }

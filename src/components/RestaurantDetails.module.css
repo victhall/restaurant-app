@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans&family=Tiro+Tamil&display=swap');
+
+.restaurant-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+}
+
+.restaurant-container {
+  display: flex;
+  padding: 35px 0px 25px 35px;
+  width: 40%;
+}
+
+.restaurant-container p {
+  margin: 0px 10px 0px 0px;
+  padding: 10px 0 5px;
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 18px;
+}
+
+.restaurant-container h2 {
+  font-size: 26px;
+}
+
+h2 {
+  margin: 0px;
+  font-family: 'Tiro Tamil', serif;
+}
+
+.inner-container {
+  padding-left: 20px;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 5px;
+}
+
+.website {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+.phone {
+  font-size: 18px;
+padding-bottom: 15px;
+}
+
+.review-container {
+  padding: 0px 0px 25px 35px;
+  width: 40%;
+}
+
+.review-container h2 {
+  padding-bottom: 25px;
+}
+
+.review-container form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.review-container input {
+margin-top: 10px;
+padding: 13px 13px 13px 10px;
+border-radius: 5px;
+border: 1px solid #e1dedc;;
+}
+
+.inner-review__container {
+  display: flex;
+  padding-top: 35px;
+}
+
+.pfp {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.profile {
+  text-align: center;
+  padding-right: 50px;
+}
+
+.profile p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.rating-review__container p {
+padding-right: 18px;
+}
