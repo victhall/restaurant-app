@@ -1,4 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans&family=Tiro+Tamil&display=swap');
+
 .restaurant-img {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+}
+
+.restaurant-container {
+  display: flex;
+  padding: 35px 0px 25px 35px;
+  border-bottom: 1px solid #e1dedc;
+  width: 40%;
+}
+
+.restaurant-container p {
+  margin: 0px 10px 0px 0px;
+  padding: 5px 0 5px;
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 15px;
+}
+
+.restaurant-name {
+  margin: 0px;
+  font-family: 'Tiro Tamil', serif;
+}
+
+.inner-container {
+  padding-left: 20px;
+}
+
+.price-cuisine {
+  display: flex;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row;
 }

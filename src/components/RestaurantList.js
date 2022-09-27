@@ -1,4 +1,5 @@
 import Restaurant from './Restaurant'
+import classes from './RestaurantList.module.css'
 
 const dummy_data = [
   {
@@ -8,7 +9,7 @@ const dummy_data = [
     address: '433 King St W, Toronto, ON M5V 1K4',
     website: 'https://misslikklemores.com/',
     image: 'https://resizer.otstatic.com/v2/photos/xlarge/2/49263409.png',
-    cuisines: ['Jamaican'],
+    cuisines: 'Jamaican',
     dining_style: 'Casual Dining',
     phone_number: '(647) 484-8789'
   },
@@ -19,7 +20,7 @@ const dummy_data = [
     address: '944 Queen St W, Toronto, ON M6J 1G8',
     website: 'http://www.primeseafoodpalace.ca/',
     image: 'https://resizer.otstatic.com/v2/photos/xlarge/1/48385453.jpg',
-    cuisines: ['Steak', 'Seafood', 'Canadian'],
+    cuisines: 'Canadian',
     dining_style: 'Fine Dining',
     phone_number: '(416) 551-8038'
   },
@@ -30,7 +31,7 @@ const dummy_data = [
     address: '222 Richmond St W, Toronto, ON M5V 1V6',
     website: 'http://www.jabistro.com/',
     image: 'https://resizer.otstatic.com/v2/photos/xlarge/2/27876883.jpg',
-    cuisines: ['Japanese', 'Asian', 'Sushi'],
+    cuisines: 'Japanese',
     dining_style: 'Casual Elegant',
     phone_number: '(647) 748-0222'
   },
@@ -41,7 +42,7 @@ const dummy_data = [
     address: '972 College Street, Toronto, ON M6H1A5',
     website: 'http://giu.ca/',
     image: 'https://resizer.otstatic.com/v2/photos/xlarge/1/25346079.jpg',
-    cuisines: ['Italian', 'Pizzeria', 'Cocktail Bar'],
+    cuisines: 'Italian',
     dining_style: 'Casual Dining',
     phone_number: '(416) 964-0606'
   },
@@ -52,7 +53,7 @@ const dummy_data = [
     address: '1727 Dundas St W, Toronto, ON M6K 1V4',
     website: 'http://viaggiorestaurant.ca/',
     image: 'https://resizer.otstatic.com/v2/photos/xlarge/1/26280985.png',
-    cuisines: ['Italian', 'Contemporary Italian', 'Wine Bar'],
+    cuisines: 'Italian',
     dining_style: 'Casual Dining',
     phone_number: '(416) 519-8165'
   },
@@ -63,7 +64,7 @@ const dummy_data = [
     address: '596 College St, Toronto, ON M6G 1B4',
     website: 'https://www.tondouramentoronto.com/',
     image: 'https://media.blogto.com/listings/20180618-2048-Tondou17.jpg?w=2048&cmd=resize_then_crop&height=1365&quality=70',
-    cuisines: ['Japanese', 'Ramen'],
+    cuisines: 'Japanese',
     dining_style: 'Casual Dining',
     phone_number: '(416) 588-8317'
   }
@@ -71,7 +72,7 @@ const dummy_data = [
 
 export default function RestaurantList() {
   return (
-    <>
+    <div className={classes['restaurant-list']}>
       {dummy_data.map(restaurant =>
         <Restaurant
           key={restaurant.name}
@@ -86,7 +87,7 @@ export default function RestaurantList() {
           cuisines={restaurant.cuisines}
         />
       )}
-    </>
+    </div>
   )
 
 }
