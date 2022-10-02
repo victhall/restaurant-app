@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans&family=Tiro+Tamil&display=swap');
 
 .restaurant-img {
-  width: 200px;
+  width: 350px;
   height: 200px;
   border-radius: 15px;
+  align-items: center;
 }
 
 .restaurant-container {
-  display: flex;
+  /* display: flex; */
   padding: 35px 0px 25px 35px;
   width: 40%;
 }
@@ -26,10 +27,6 @@
 h2 {
   margin: 0px;
   font-family: 'Tiro Tamil', serif;
-}
-
-.inner-container {
-  padding-left: 20px;
 }
 
 .star-rating {
@@ -76,9 +73,9 @@ border: 1px solid #e1dedc;;
 }
 
 .pfp {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  border-radius: 10%;
 }
 
 .profile {

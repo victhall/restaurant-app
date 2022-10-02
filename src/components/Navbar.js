@@ -2,11 +2,11 @@ import classes from './Navbar.module.css'
 import SearchBar from './SearchBar'
 import { FiChevronDown } from "react-icons/fi"
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <nav className={classes['navbar-container']}>
       <div>
-        <SearchBar />
+        <SearchBar search={props.searchHandler} handler={props.submitHandler}/>
       </div>
       <div className={classes.menu}>
         <button className={classes['menu-btn']}>Map</button>

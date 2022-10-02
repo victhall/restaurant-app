@@ -12,25 +12,18 @@ export default function RestaurantDetail(props) {
       <div className={classes['restaurant-container']}>
         <img className={classes['restaurant-img']} src={props.image} />
         <div className={classes['inner-container']}>
-          <h2>{props.name}</h2>
+          <h2>Giulietta</h2>
+          <p className={classes.cuisines}>Italian</p>
 
           <div className={classes['star-rating']}>
             <p>{props.rating}</p>
-            <ReactStars
-              count={props.rating}
-              size={24}
-              isHalf={true}
-              emptyIcon={<i className="far fa-star"></i>}
-              halfIcon={<i className="fa fa-star-half-alt"></i>}
-              fullIcon={<i className="fa fa-star"></i>}
-              activeColor="#fe6f61"
-            />
-
           </div>
           <div className={classes['price-cuisine']}>
-            <p className={classes.cuisines}><GoLocation />  {props.address}</p>
+            <p className={classes.cuisines}><GoLocation />  51 King St W, Toronto, ON</p>
+            <p className={classes.phone}><BsTelephone/> (416) 747-1768</p>
+            <p className={classes.website}><BsLink45Deg /> www.gui.com</p>
 
-            <p className={classes.cuisines}><FaUtensils /> {props.cuisines}</p>
+
             <p className={classes.price}>{props.price}</p>
           </div>
 
@@ -40,15 +33,8 @@ export default function RestaurantDetail(props) {
 
       <div className={classes['review-container']}>
 
-        <p className={classes.website}><BsLink45Deg /> {props.website}</p>
-        <p className={classes.phone}><BsTelephone/> {props.phone}</p>
 
         <h2>Reccomendations</h2>
-        <form>
-          <label>Sort by</label>
-          <input placeholder="Newest" />
-        </form>
-
         <div className={classes['inner-review__container']}>
 
         <div className={classes.profile}>

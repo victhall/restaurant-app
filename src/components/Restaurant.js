@@ -1,6 +1,5 @@
 import classes from './Restaurant.module.css'
 import ReactStars from "react-rating-stars-component";
-import RestaurantDetail from './RestaurantDetails';
 
 export default function Restaurant(props) {
 
@@ -16,7 +15,7 @@ export default function Restaurant(props) {
           <div className={classes['star-rating']}>
             <p>{props.rating}</p>
             <ReactStars
-              count={props.rating}
+              count={5}
               size={24}
               isHalf={true}
               emptyIcon={<i className="far fa-star"></i>}
