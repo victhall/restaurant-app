@@ -6,7 +6,7 @@ import { BsLink45Deg } from "react-icons/bs";
 import { BsTelephone } from "react-icons/bs";
 
 
-export default function RestaurantDetail(props) {
+export default function RestaurantDetails(props) {
   return (
     <>
       <div className={classes['restaurant-container']}>

@@ -6,6 +6,7 @@ import RestaurantList from '../RestaurantList';
 
 export default function Home() {
   const [restaurantData, setRestaurantData] = useState([]);
+  const [showDetails, setShowDetails] = useState(false);
 
   useEffect(() => {
     async function fetchRestaurantData() {
@@ -25,13 +26,12 @@ export default function Home() {
     fetchRestaurantData();
   }, [])
 
-  
-
   return (
     <>
       <Navbar />
-      <RestaurantList restaurantData={restaurantData} />
-      <RestaurantDetails />
+      {<RestaurantList restaurantData={restaurantData} setShowDetails={setShowDetails} />}
+      {/* {ShowDetails ? <RestaurantDetails setShowDetails={setShowDetails} /> : null} */}
+      {showDetails ? <RestaurantDetails setShowDetails={setShowDetails}/> : null}
     </>
   );
 }
