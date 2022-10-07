@@ -17,12 +17,12 @@ export default function SearchBar(props) {
 
   return (
     <div className={classes.searchbar}>
-      <form onSubmit={submitHandler}>
+      <form onSubmit={props.onHandleSubmit}>
         <FiSearch className={classes['search-icon']} />
         <input
           placeholder='Restaurant or Cuisine'
           type='text'
-          onChange={searchHandler} />
+          onChange={props.onHandleSearch} />
       </form>
     </div>
   )
