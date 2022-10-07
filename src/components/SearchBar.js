@@ -1,10 +1,9 @@
 import classes from './SearchBar.module.css';
 import { FiSearch } from "react-icons/fi";
 import { useState } from 'react';
-import RestaurantList from './RestaurantList';
 
 export default function SearchBar(props) {
-const [search, setSearch] = useState('');
+  const [search, setSearch] = useState('');
 
   function searchHandler(e) {
     setSearch(e.target.value);
@@ -12,6 +11,8 @@ const [search, setSearch] = useState('');
 
   function submitHandler(e) {
     e.preventDefault();
+
+    props.onFilter(search)
   }
 
   return (

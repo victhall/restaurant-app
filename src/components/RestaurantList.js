@@ -1,14 +1,22 @@
 import Restaurant from './Restaurant'
 import classes from './RestaurantList.module.css'
 
-export default function RestaurantList({ restaurantData, setShowDetails }) {
+export default function RestaurantList(props) {
 
   return (
     <div className={classes['restaurant-list']} onClick={() => {
-      setShowDetails(true)
+      props.setShowDetails(true)
       console.log('TRUE')
     }}>
-      {restaurantData && restaurantData.map(restaurant => {
+      {props.restaurantData && props.restaurantData.filter((restaurant) => {
+        //if search input is blank, return list of users
+        if (!props.onSearch) {
+          return restaurant
+          //if user contains search input characters, return those users
+        } else if (restaurant.name.toLowerCase().includes(props.onSearch.toLowerCase())) {
+          return restaurant
+        }
+      }).map(restaurant => {
         return <Restaurant
           key={restaurant.id}
           name={restaurant.name}
@@ -19,20 +27,20 @@ export default function RestaurantList({ restaurantData, setShowDetails }) {
           cuisines={restaurant.categories[0].title}
           phone={restaurant.display_phone}
           url={restaurant.url}
-          // setShowDetails={setShowDetails}
+        // setShowDetails={setShowDetails}
         />
       })}
     </div>
   )
 }
 
-// {users && users.filter((user) => {
+// {props.restaurantData && props.restaurantData.filter((restaurant) => {
 //   //if search input is blank, return list of users
-//   if (searchInput == "") {
-//     return user
+//   if (search == "") {
+//     return restaurants
 //     //if user contains search input characters, return those users
-//   } else if (user.username.toLowerCase().includes(searchInput.toLowerCase())) {
-//     return user
+//   } else if (restaurant.name.toLowerCase().includes(search.toLowerCase())) {
+//     return restaurant
 //   }
 // }).map((user) => {
 //   //if logged in username matches username in list, do not show
